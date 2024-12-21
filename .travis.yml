@@ -1,0 +1,15 @@
+language: node_js
+services:
+  - xvfb
+addons:
+  chrome: stable
+cache:
+  directories:
+    - node_modules
+node_js:
+  - "6"
+  - "8"
+before_script:
+  - npm install -g babel-cli
+script:
+  - npm run build
